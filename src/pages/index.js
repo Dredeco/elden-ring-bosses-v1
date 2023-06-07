@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { EB_Garamond } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Header from '@/components/Header'
-import Bosses from '@/components/Bosses'
+import BossCard from '@/components/BossCard'
 
 const EBGaramond = EB_Garamond({ subsets: ['latin'] })
 
@@ -17,7 +17,7 @@ export default function Home() {
       </Head>
       <main className={`${styles.main} ${EBGaramond.className}`}>
         <Header />
-        <Bosses />
+        <BossCard />
       </main>
     </>
   )
