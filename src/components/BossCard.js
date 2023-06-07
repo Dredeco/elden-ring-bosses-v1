@@ -16,6 +16,7 @@ const BossesSection = styled.section`
 
 const Container = styled.div`
     margin: 1rem 2%;
+    max-width: 1280px;
 `
 
 const BossesList = styled.ul`
@@ -64,14 +65,18 @@ const TagBossCard = styled.li`
     }
     a {
         text-decoration: none;
-        color: #fff;
+        color: #222;
         background-color: goldenrod;
         padding: .5rem 1rem;
         border-radius: 10px;
-        border: 1px solid #555;
+        border: 1px solid #444;
         text-transform: uppercase;
         font-weight: 700;
         width: 70%;
+        :hover, :active {
+            background-color: #222;
+            color: #fff;
+        }
     }
 `
 
