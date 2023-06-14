@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import Loading from './Loading'
 import { getData } from '../api/api'
+import SearchInput from './SearchInput'
 
 async function getBosses() {
     let bosses = await getData()
@@ -11,7 +12,7 @@ async function getBosses() {
   }
 
 const BossesSection = styled.section`
-    height: auto;
+    width: 100%;
 `
 
 const Container = styled.div`
@@ -89,7 +90,7 @@ export default function BossCard() {
         setTimeout(() => (
             getBosses()
             .then((data) => setBosses(data))
-        ), 100)
+        ), )
       setTimeout(() => (
         setIsLoading(false)
       ), 3000)
@@ -101,6 +102,7 @@ export default function BossCard() {
         return (
         <BossesSection>
             <Container>
+                <SearchInput setResults={setBosses} />
                 <BossesList>
                     {bosses.map((boss) => {
                     if (boss.image != null) {

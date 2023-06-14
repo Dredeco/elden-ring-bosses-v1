@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Image from 'next/image'
 
 import Logo from '../../public/logo.png'
+import SearchInput from './SearchInput'
 
 const TagHeader = styled.header`
     margin: 2rem 0;
@@ -25,7 +26,7 @@ const TagHeader = styled.header`
 export default function Header() {
   return (
     <TagHeader>
-        <Image 
+      <Image 
           src={Logo}
           widht={200}
           height={50}
