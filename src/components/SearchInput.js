@@ -20,8 +20,8 @@ export default function SearchInput({ setResults }) {
     const [inputValue, setInputValue] = useState('')
 
     const handleChange = (value) => {
-        setInputValue(value)
-        fetchData(value)
+        setInputValue(value.toLowerCase())
+        fetchData(value.toLowerCase())
     }
 
     const fetchData = async (value) => {
