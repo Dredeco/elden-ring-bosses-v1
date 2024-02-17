@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 
-export const TagBossInfo = styled.section`
+const TagBossInfo = styled.section`
     display: flex;
     justify-content: center;
 `
+export default TagBossInfo
 
 export const Container = styled.div`
     margin: 1rem 2%;

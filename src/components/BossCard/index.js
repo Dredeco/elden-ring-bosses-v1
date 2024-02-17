@@ -3,7 +3,7 @@ import Link from 'next/link'
 import React, { useState, useEffect } from 'react'
 import Loading from '../Loading'
 import { getBosses } from '../../api/api'
-import { BossesList, BossesSection, Container, TagBossCard } from './styles'
+import BossesSection, { BossesList, Container, TagBossCard } from './styles'
 import SearchInput from '../SearchInput'
 
 export default function BossCard() {
@@ -26,8 +26,7 @@ export default function BossCard() {
     } else {
         return (
         <BossesSection>
-            <Container>
-                <SearchInput setResults={setBosses} />                
+            <Container>              
                 <BossesList>
                     {bosses.map((boss) => {
                     if (boss.image != null) {

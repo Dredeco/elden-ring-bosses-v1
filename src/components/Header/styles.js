@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const TagHeader = styled.header`
+const TagHeader = styled.header`
     width: 100%;
     padding: 2rem 1rem;
     font-size: 2rem;
@@ -8,6 +8,31 @@ export const TagHeader = styled.header`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    > div {
+        display: flex;
+        gap: 1rem;
+    }
+
+    > div > button {
+        font-size: 1.2rem;
+        position: relative;
+        top: 1rem;
+        background-color: rgba(0, 0, 0, .8);
+        padding: .5rem 2rem;
+        color: goldenrod;
+        border: 1px solid #ccc;
+        z-index: 10;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: all .4s;
+
+        :hover {
+            background-color: goldenrod;
+            color: #222;
+        }
+    }
+
     span {
         text-transform: uppercase;
         font-weight: 700;
@@ -34,3 +59,4 @@ export const TagHeader = styled.header`
         }
     }
 `
+export default TagHeader

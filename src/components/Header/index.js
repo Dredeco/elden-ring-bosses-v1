@@ -2,8 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 
 import Logo from '../../../public/logo.png'
-import SearchInput from '../SearchInput'
-import { TagHeader } from './styles'
+import TagHeader from './styles'
 
 export default function Header() {
   return (
@@ -13,13 +12,10 @@ export default function Header() {
           width={600}
           alt='Elden Ring Logo'
         />
-        
-        <nav>
-          <ul>
-            <li>Bosses</li>
-            <li>NPCs</li>
-          </ul>
-        </nav>
+        <div>
+          <button>Bosses</button>
+          <button>NPCs</button>
+        </div>
     </TagHeader>
   )
 }

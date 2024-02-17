@@ -1,36 +1,7 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
-export const BossesSection = styled.section`
-    width: 100%;
-    max-width: 1280px;
-    display: flex;
-    justify-content: center;
-`
-export default BossesSection;
-
-export const Container = styled.div`
-    margin: 1rem 2%;
-    max-width: 1280px;
-`
-
-export const BossesList = styled.ul`
-    list-style: none;
-    padding: 0;
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: 1fr;
-
-    @media screen and (min-width: 426px) {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    @media screen and (min-width: 769px) {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-`
-
-export const TagBossCard = styled.li`
-    background-color: #000;
+export const TagCard = styled.div`
+    background-color: rgba(0, 0, 0, .7);
     padding: .5rem .5rem;
     display: flex;
     flex-direction: column;
