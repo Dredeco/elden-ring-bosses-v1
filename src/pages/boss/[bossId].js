@@ -32,7 +32,7 @@ export async function getStaticProps(context) {
 
 
 
-export default function BossInfo({ boss }) {
+function BossInfo({ boss }) {
   let [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
@@ -67,3 +67,5 @@ export default function BossInfo({ boss }) {
       </TagBossInfo>
     )
 }
+
+export default BossInfo
