@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
-import {getBossById, getBosses} from '@/api/api'
+import {getAllBosses, getBossById} from '@/api/api'
 import Link from 'next/link'
 import Loading from '../../components/Loading'
 import ChevronLeft from '@/components/Icons/ChevronLeft'
 import { Container, GeneralInfo, TagBossInfo } from './styles'
+import Head from 'next/head'
 
 export async function getStaticPaths() {
-  let bosses = await getBosses()
+  let bosses = await getAllBosses()
   
   let paths = bosses.map((boss) => {
     return {
@@ -45,6 +46,10 @@ function BossInfo({ boss }) {
     return <Loading />
   }
     return (
+      <>
+      <Head>
+        <title>{boss.name} - Boss Info</title>
+      </Head>
       <TagBossInfo>
           <Container>
           <h1>{boss.name}</h1>
@@ -65,6 +70,7 @@ function BossInfo({ boss }) {
           <Link href='/'><ChevronLeft /> BACK</Link>
         </Container>
       </TagBossInfo>
+      </>
     )
 }
 

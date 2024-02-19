@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react'
 import Loading from '../Loading'
 import { getBosses } from '../../api/api'
 import BossesSection, { BossesList, Container, TagBossCard } from './styles'
-import SearchInput from '../SearchInput'
 
 export default function BossCard() {
     let [isLoading, setIsLoading] = useState(true)
@@ -12,7 +11,7 @@ export default function BossCard() {
 
     useEffect(() => {
         const getData = async () => {
-            const bossesData = await getBosses()
+            const bossesData = await getBosses(10)
             setBosses(bossesData)
         }
         getData()
@@ -26,13 +25,13 @@ export default function BossCard() {
     } else {
         return (
         <BossesSection>
-            <Container>              
+            <Container>
                 <BossesList>
                     {bosses.map((boss) => {
                     if (boss.image != null) {
                         return (
                         <TagBossCard key={boss.id}>
-                            <Image 
+                            <Image
                                 src={`${boss.image}`}
                                 width={300}
                                 height={120}
@@ -45,7 +44,6 @@ export default function BossCard() {
                         </TagBossCard>
                     )}
                     })}
-    
                 </BossesList>
             </Container>
         </BossesSection>

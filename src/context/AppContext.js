@@ -8,8 +8,8 @@ export const AppContext = createContext({
 })
 
 export const AppContextProvider = ({children}) => {
-    const [page, setPage] = useState('bosses')
-    const [filter, setFilter] = useState('')
+    const [page, setPage] = useState('boss')
+    const [filter, setFilter] = useState([])
     
     return (
         <AppContext.Provider value={{page, setPage, filter, setFilter}}>

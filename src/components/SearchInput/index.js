@@ -1,26 +1,14 @@
 import { getBosses, getData } from '@/api/api'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import styled from 'styled-components'
 import { InputContainer } from './styles'
+import { AppContext } from '@/context/AppContext'
 
-export default function SearchInput({ setResults }) {
-    const [inputValue, setInputValue] = useState('')
+export default function SearchInput() {
+    const {setFilter} = useContext(AppContext)
 
     const handleChange = (value) => {
-        setInputValue(value.toLowerCase())
-        fetchData(value.toLowerCase())
-    }
-
-    const fetchData = async (value) => {
-        let data = await getBosses()
-        let results = data.filter((boss) => {
-            return (
-                boss &&
-                boss.name &&
-                boss.name.toLowerCase().includes(value)
-            )
-        })
-        setResults(results)
+        setFilter(value.toLowerCase())
     }
 
     return (

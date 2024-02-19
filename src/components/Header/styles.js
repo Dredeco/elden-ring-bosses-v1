@@ -26,6 +26,7 @@ const TagHeader = styled.header`
         cursor: pointer;
         border-radius: 10px;
         transition: all .4s;
+        font-family: "Kanit", sans-serif;
 
         :hover {
             background-color: goldenrod;

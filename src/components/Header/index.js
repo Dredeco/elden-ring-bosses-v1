@@ -1,10 +1,21 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Image from 'next/image'
 
 import Logo from '../../../public/logo.png'
 import TagHeader from './styles'
+import { AppContext } from '@/context/AppContext'
 
 export default function Header() {
+  const {setPage} = useContext(AppContext)
+
+  const handleBosses = () => {
+    setPage("boss")
+  }
+
+  const handleNPCs = () => {
+    setPage("npc")
+  }
+
   return (
     <TagHeader>
       <Image 
@@ -13,8 +24,8 @@ export default function Header() {
           alt='Elden Ring Logo'
         />
         <div>
-          <button>Bosses</button>
-          <button>NPCs</button>
+          <button onClick={handleBosses}>Bosses</button>
+          <button onClick={handleNPCs}>NPCs</button>
         </div>
     </TagHeader>
   )

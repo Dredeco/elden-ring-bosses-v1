@@ -1,20 +1,20 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { Card } from '../Card'
-import { getBosses } from '@/api/api'
+import { getBosses, getNPC } from '@/api/api'
 import Loading from '../Loading'
 import { AppContext } from '@/context/AppContext'
 import { BossSectionContainer, BossSectionMain } from './styles'
 
-export const BossSection = () => {
+export const NPCSection = () => {
     const [isLoading, setIsLoading] = useState(true)
-    const [bosses, setBosses] = useState([])
+    const [npcs, setNpcs] = useState([])
     const {filter} = useContext(AppContext)
     const [pageLimit, setPageLimit] = useState(10)
 
     useEffect(() => {
         const getData = async () => {
-            const bossesData = await getBosses(pageLimit)
-            setBosses(bossesData)
+            const bossesData = await getNPC(pageLimit)
+            setNpcs(bossesData)
         }
         getData()
         setTimeout(() => (
@@ -32,13 +32,13 @@ export const BossSection = () => {
     return (
         <BossSectionMain>
             <BossSectionContainer>
-                {(filter.length == 0 ? bosses : filter).map((boss) => {
+                {(filter.length == 0 ? npcs : filter).map((npc) => {
                     return (
-                        <Card bossData={boss}/>
+                        <Card bossData={npc}/>
                     )
                 })}
             </BossSectionContainer>
-            <button onClick={handleLoadMore}>Load more</button>
+            <button onClick={handleLoadMore}>Carregar mais</button>
         </BossSectionMain>
     )
     }

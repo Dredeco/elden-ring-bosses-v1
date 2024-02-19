@@ -1,15 +1,16 @@
 import styled from "styled-components";
 
 export const TagCard = styled.div`
-    background-color: rgba(0, 0, 0, .7);
+    background-color: rgba(0, 0, 0, .5);
     padding: .5rem .5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    border: 1px solid gold;
+    border: 1px solid #ccc;
     border-radius: 10px;
+    font-family: "Playfair Display", serif;
     img {
         width: 100%;
         min-height: 12rem;
@@ -20,6 +21,7 @@ export const TagCard = styled.div`
         text-decoration: underline;
         text-decoration-color: goldenrod;
         text-underline-offset: .3rem;
+        font-family: "Kanit", sans-serif;
     }
     h4 {
         margin: 0;
@@ -39,6 +41,8 @@ export const TagCard = styled.div`
         text-transform: uppercase;
         font-weight: 700;
         width: 70%;
+        transition: all .4s;
+
         :hover, :active {
             background-color: #222;
             color: #fff;
