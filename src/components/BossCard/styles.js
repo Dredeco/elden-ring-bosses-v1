@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const BossesSection = styled.section`
-    width: 100%;
+    width: 100vw;
     max-width: 1280px;
     display: flex;
     justify-content: center;

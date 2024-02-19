@@ -31,7 +31,7 @@ export const BossSectionContainer = styled.div`
     width: 100%;
     height: fit-content;
     max-width: 1280px;
-    padding: 1rem 1.5rem;
+    padding: 1rem 2%;
     border: 2px solid goldenrod;
     display: flex;
     flex-wrap: wrap;

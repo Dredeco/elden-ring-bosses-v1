@@ -22,6 +22,7 @@ export default function Header() {
           src={Logo}
           width={600}
           alt='Elden Ring Logo'
+          style={{objectFit: "contain"}}
         />
         <div>
           <button onClick={handleBosses}>Bosses</button>

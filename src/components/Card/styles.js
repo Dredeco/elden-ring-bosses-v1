@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const TagCard = styled.div`
+    width: 32%;
+    min-width: 300px !important;
     background-color: rgba(0, 0, 0, .5);
     padding: .5rem .5rem;
     display: flex;

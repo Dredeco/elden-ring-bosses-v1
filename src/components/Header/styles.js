@@ -1,13 +1,17 @@
 import styled from "styled-components";
 
 const TagHeader = styled.header`
-    width: 100%;
+    width: 100vw;
     padding: 2rem 1rem;
     font-size: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    > img {
+        max-width: 100% !important;
+    }
 
     > div {
         display: flex;
