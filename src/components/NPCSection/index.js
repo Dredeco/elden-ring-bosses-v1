@@ -9,7 +9,7 @@ export const NPCSection = () => {
     const [isLoading, setIsLoading] = useState(true)
     const [npcs, setNpcs] = useState([])
     const {filter} = useContext(AppContext)
-    const [pageLimit, setPageLimit] = useState(10)
+    const [pageLimit, setPageLimit] = useState(9)
 
     useEffect(() => {
         const getData = async () => {
@@ -23,7 +23,7 @@ export const NPCSection = () => {
     }, [filter, pageLimit])
 
     const handleLoadMore = () => {
-        setPageLimit(pageLimit + 10)
+        setPageLimit(pageLimit + 9)
     }
 
     if (isLoading) {

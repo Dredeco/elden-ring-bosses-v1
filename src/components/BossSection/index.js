@@ -23,7 +23,7 @@ export const BossSection = () => {
     }, [filter, pageLimit])
 
     const handleLoadMore = () => {
-        setPageLimit(pageLimit + 10)
+        setPageLimit(pageLimit + 9)
     }
 
     if (isLoading) {

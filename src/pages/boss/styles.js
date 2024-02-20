@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const TagBossInfo = styled.section`
+    width: 100vw;
     display: flex;
     justify-content: center;
 `
@@ -8,6 +9,7 @@ export default TagBossInfo
 
 export const Container = styled.div`
     margin: 1rem 2%;
+    width: 100%;
     max-width: 1280px;
     display: flex;
     align-items: center;
@@ -29,8 +31,7 @@ export const Container = styled.div`
     }
     img {
         margin: 1rem 0;
-        max-height: 20rem;
-        max-width: 50rem;
+        width: 100%;
     }
     span {
         font-style:oblique;

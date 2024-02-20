@@ -3,7 +3,6 @@ import styled from "styled-components"
 export const BossSectionMain = styled.section`
     width: 100vw;
     height: fit-content;
-    background-color: rgba(22, 22, 22, .8);
     margin-top: 26px;
     padding: 0 2%;
     display: flex;
@@ -33,6 +32,7 @@ export const BossSectionContainer = styled.div`
     max-width: 1280px;
     padding: 1rem 2%;
     border: 2px solid goldenrod;
+    background-color: rgba(22, 22, 22, .8);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
